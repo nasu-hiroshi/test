@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+<constant name="struts.devMode" value="true" />
+<!-- 対象のpackageを設定 -->
+<package name="com.internousdev.sample.action" extends="struts-default">
+
+<!-- HomeAction -->
+<action name="HomeAction" class="com.internousdev.sample.action.HomeAction" method="execute">
+<result name="success">itemList.jsp</result>
+</action>
+
+<!-- ItemPageAction -->
+<action name="ItemPageAction" class="com.internousdev.sample.action.ItemPageAction" method="execute">
+<result name="success">itemPage.jsp</result>
+</action>
+
+<!-- CartItemAction -->
+<action name="CartItemAction" class="com.internousdev.sample.action.CartItemAction" method="execute">
+<result name="success">itemPage.jsp</result>
+</action>
+
+</package>
+</struts>
